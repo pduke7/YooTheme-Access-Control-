@@ -19,6 +19,10 @@ define('YOOTHEME_ACCESS_CONTROL_VERSION', '1.0.0');
 define('YOOTHEME_ACCESS_CONTROL_PLUGIN_DIR', plugin_dir_path(__FILE__));
 define('YOOTHEME_ACCESS_CONTROL_PLUGIN_URL', plugin_dir_url(__FILE__));
 
+// Include Plugin Update Checker library
+require YOOTHEME_ACCESS_CONTROL_PLUGIN_DIR . 'lib/plugin-update-checker/plugin-update-checker.php';
+use YahnisElsts\PluginUpdateChecker\v5\PucFactory;
+
 /**
  * Main plugin class
  */
@@ -144,4 +148,17 @@ class YooThemeAccessControl {
 }
 
 // Initialize the plugin
-new YooThemeAccessControl(); 
+new YooThemeAccessControl();
+
+// Initialize update checker
+$updateChecker = PucFactory::buildUpdateChecker(
+    'https://github.com/pduke7/YooTheme-Access-Control-',
+    __FILE__,
+    'yootheme-access-control'
+);
+
+// Set the branch that contains the stable release
+$updateChecker->setBranch('main');
+
+// Optional: If your GitHub repo is private, you can set an access token
+// $updateChecker->setAuthentication('your-token-here'); 
