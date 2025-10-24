@@ -1,7 +1,7 @@
 <?php
 /**
  * Plugin Name: YooTheme Access Control
- * Plugin URI: https://prasina-scholeia.gr
+ * Plugin URI: https://github.com/pduke7/YooTheme-Access-Control-
  * Description: Restricts YooTheme Builder access to administrators only. Blocks all other user roles from accessing YooTheme functionality.
  * Version: 1.0.0
  * Author: {uv}-ultravintage
