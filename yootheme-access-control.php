@@ -4,7 +4,7 @@
  * Plugin URI: https://prasina-scholeia.gr
  * Description: Restricts YooTheme Builder access to administrators only. Blocks all other user roles from accessing YooTheme functionality.
  * Version: 1.0.0
- * Author: Prasina Scholeia
+ * Author: {uv}-ultravintage
  * License: GPL v2 or later
  * Text Domain: yootheme-access-control
  */
